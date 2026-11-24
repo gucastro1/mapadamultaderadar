@@ -144,6 +144,9 @@ body:not(.ready) .track{animation:none}
 @media (min-width:760px){.bcard:last-child:nth-child(odd){grid-column:auto;max-width:none}}
 .bcard .bn{position:absolute;top:-11px;left:50%;transform:translateX(-50%);background:var(--r);color:#fff;font-weight:800;font-size:11.5px;padding:4px 10px;border-radius:99px;white-space:nowrap;text-transform:uppercase}
 .bcard img{width:100%;max-width:220px;margin:0 auto;border-radius:10px;box-shadow:0 10px 24px rgba(0,0,0,.35)}
+.bcard img{transition:transform .25s ease,box-shadow .25s ease;will-change:transform}
+@media (hover:hover){.bcard:hover img{transform:translateY(-10px) scale(1.04);box-shadow:0 22px 36px rgba(0,0,0,.5)}}
+.bcard.lift img{transform:translateY(-10px) scale(1.04);box-shadow:0 22px 36px rgba(0,0,0,.5)}
 .bcard h3{font-size:14.5px;font-weight:800;margin:10px 0 8px;line-height:1.25}
 .bv{display:inline-block;background:#fff;color:var(--n);border-radius:99px;padding:4px 10px;font-size:12px;font-weight:700}
 .bv s{color:var(--mu)}.bv b{color:#13924f}
@@ -523,6 +526,13 @@ document.querySelectorAll('#tabs button').forEach(function(t){ t.addEventListene
   document.getElementById('cEco').textContent=brl(e);
   document.getElementById('cPts').textContent='+ '+t.dataset.p+' pontos na CNH'+(t.dataset.p==='7'?' e suspensão':'');
 }); });
+
+
+// Bônus: capa levanta ao tocar (celular) ou passar o mouse (CSS)
+document.querySelectorAll('.bcard').forEach(function(c){
+  var t; c.addEventListener('touchstart', function(){ clearTimeout(t); c.classList.add('lift'); }, { passive: true });
+  ['touchend','touchcancel'].forEach(function(ev){ c.addEventListener(ev, function(){ t = setTimeout(function(){ c.classList.remove('lift'); }, 350); }, { passive: true }); });
+});
 
 // Pixel da Meta e Microsoft Clarity: carregam no primeiro toque/rolagem ou 2 s depois da página
 (function(){
