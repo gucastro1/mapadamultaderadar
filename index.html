@@ -236,6 +236,11 @@ footer p{max-width:720px;margin:8px auto 0}
 .rv.in{opacity:1;transform:none}
 @media (prefers-reduced-motion:reduce){.btn,.track{animation:none}.rv{opacity:1;transform:none}}
 </style>
+<!-- Pixel da Meta: carrega já no início (assíncrono, não trava a página) para contar toda visita -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init','2452932315525419');fbq('track','PageView');
+</script>
 </head>
 <body>
 
@@ -535,14 +540,12 @@ document.querySelectorAll('.bcard').forEach(function(c){
   ['touchend','touchcancel'].forEach(function(ev){ c.addEventListener(ev, function(){ t = setTimeout(function(){ c.classList.remove('lift'); }, 350); }, { passive: true }); });
 });
 
-// Pixel da Meta e Microsoft Clarity: carregam no primeiro toque/rolagem ou 2 s depois da página
+// Microsoft Clarity: carrega no primeiro toque/rolagem ou logo depois de a página montar (sem esperar as imagens)
 (function(){
   var ok = 0;
   function go(){
     if (ok) return; ok = 1;
-    if (CONFIG.pixel){
-      !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
-      fbq('init', CONFIG.pixel); fbq('track', 'PageView');
+    if (window.fbq){
       document.querySelectorAll('[data-plano]').forEach(function(a){ a.addEventListener('click', function(){ if (a.getAttribute('href').charAt(0) !== '#') fbq('track', 'InitiateCheckout'); }); });
     }
     if (CONFIG.clarity){
@@ -550,7 +553,7 @@ document.querySelectorAll('.bcard').forEach(function(c){
     }
   }
   ['touchstart','scroll','mousemove','keydown'].forEach(function(ev){ addEventListener(ev, go, { once: true, passive: true }); });
-  addEventListener('load', function(){ setTimeout(go, 2000); });
+  setTimeout(go, 300);
 })();
 </script>
 </body>
