@@ -8,6 +8,15 @@
           "value": "public, max-age=2592000, immutable"
         }
       ]
+    },
+    {
+      "source": "/bonus-52c56c1a/(.*)",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        }
+      ]
     }
   ]
 }
