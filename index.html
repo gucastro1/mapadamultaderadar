@@ -406,6 +406,8 @@ footer b{color:#C4D3E3}
 .bgrid{grid-template-columns:repeat(2,minmax(0,1fr))!important}.bcard{min-width:0}
 @media(min-width:820px){.bgrid{grid-template-columns:repeat(4,minmax(0,1fr))!important}}
 img.av{object-fit:cover;display:block;padding:0;background:#ddd}
+.para2 .calc{margin-top:26px}.res .btn,.para2 .btn,.dentro .btn{margin-top:24px}
+section.caso{background:#F5F7FA!important}section.dentro{background:#fff!important}
 </style>
 <!-- Pixel da Meta: carrega já no início (assíncrono, não trava a página) para contar toda visita -->
 <script>
@@ -482,6 +484,33 @@ fbq('init','2452932315525419');fbq('track','PageView');
    <div class="rc rv"><img src="img/r5.webp" width="240" height="240" alt="" loading="lazy" decoding="async"><h3>Pague com 40% de desconto</h3><p>O passo a passo do SNE</p></div>
    <div class="rc rv"><img src="img/r6.webp" width="240" height="240" alt="" loading="lazy" decoding="async"><h3>Sua CNH sob controle</h3><p>Régua de pontos e prazos</p></div>
   </div>
+  <a class="btn" href="#planos">QUERO O MAPA DA MULTA <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+ </div>
+</section>
+
+<section class="para2 conta2">
+ <div class="w">
+  <h2>É para você que quer</h2>
+  <ul class="chips">
+   <li class="rv"><i><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg></i>Saber se a multa tem erro</li>
+   <li class="rv"><i><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg></i>Não pagar a multa cheia</li>
+   <li class="rv"><i><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg></i>Não gastar com advogado à toa</li>
+   <li class="rv"><i><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg></i>Não perder o prazo da defesa</li>
+   <li class="rv"><i><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg></i>Não perder pontos sem precisar</li>
+   <li class="rv"><i><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg></i>Proteger a CNH que te sustenta</li>
+  </ul>
+  <div class="calc rv">
+   <h3>Faça a conta 👇</h3>
+   <p class="cq">Qual é a sua multa?</p>
+   <div class="tabs" id="tabs"><button type="button" data-v="130.16" data-p="4">Média</button><button type="button" class="on" data-v="195.23" data-p="5">Grave</button><button type="button" data-v="880.41" data-p="7">Gravíssima</button></div>
+   <div class="cres">
+    <div class="cb bad"><span>Multa cheia</span><b id="cCheia">R$ 195,23</b><small id="cPts">+ 5 pontos na CNH</small></div>
+    <div class="cb good"><span>Com 40% de desconto</span><b id="cDesc">R$ 117,14</b><small>pagando pelo SNE</small></div>
+   </div>
+   <div class="ceco">Os 40% valem <b id="cEco">R$ 78,09</b>. O Mapa custa <b>R$ 37</b>, uma vez só.</div>
+   <p class="cnote">E se a notificação tiver erro, a defesa pronta pode derrubar a multa e os pontos. Os 40% valem para quem já tem o SNE na data da multa; sem ele, o desconto é de 20%.</p>
+  </div>
+  <a class="btn" href="#planos">ACESSAR AGORA <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
  </div>
 </section>
 
@@ -498,47 +527,6 @@ fbq('init','2452932315525419');fbq('track','PageView');
    <button class="co" type="button"><span class="ce">💸</span><span class="ct">A multa está certa e quero pagar o mínimo</span><span class="ca">Vá para as páginas 25 e 26: quando vale o desconto de 40% e como ativar o SNE.</span></button>
    <button class="co" type="button"><span class="ce">🪪</span><span class="ct">Tenho medo de perder a CNH</span><span class="ca">Vá para a página 27: a régua de pontos e quando chamar um advogado.</span></button>
   </div>
- </div>
-</section>
-
-<section class="conta">
- <div class="w">
-  <h2>Pagar a multa cheia ou <em>usar o Mapa?</em></h2>
-  <p class="lead">Quase todo mundo paga do jeito que a carta chega. Faça a conta.</p>
-  <div class="calc rv">
-   <h3>Faça a conta</h3>
-   <p class="cq">Qual é a sua multa?</p>
-   <div class="tabs" id="tabs"><button type="button" data-v="130.16" data-p="4">Média</button><button type="button" class="on" data-v="195.23" data-p="5">Grave</button><button type="button" data-v="880.41" data-p="7">Gravíssima</button></div>
-   <div class="cres">
-    <div class="cb bad"><span>Multa cheia</span><b id="cCheia">R$ 195,23</b><small id="cPts">+ 5 pontos na CNH</small></div>
-    <div class="cb good"><span>Com 40% de desconto</span><b id="cDesc">R$ 117,14</b><small>pagando pelo SNE</small></div>
-   </div>
-   <div class="ceco">Os 40% valem <b id="cEco">R$ 78,09</b>. O Mapa custa <b>R$ 37</b>, uma vez só.</div>
-   <p class="cnote">E se a notificação tiver erro, a defesa pronta pode derrubar a multa e os pontos. Os 40% valem para quem já tem o SNE na data da multa; sem ele, o desconto é de 20%.</p>
-  </div>
-  <a class="btn" href="#planos">ACESSAR AGORA <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
- </div>
-</section>
-
-<section class="urg">
- <div class="w">
-  <h2>A sua notificação tem prazo</h2>
-  <p>Passou a data da defesa, você perde a chance de contestar. Passou o vencimento, perde o desconto e paga a multa cheia.</p>
-  <a class="btn" href="#planos">ACESSAR AGORA <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
- </div>
-</section>
-
-<section class="para2">
- <div class="w">
-  <h2>É para você que quer</h2>
-  <ul class="chips">
-   <li class="rv"><i><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg></i>Saber se a multa tem erro</li>
-   <li class="rv"><i><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg></i>Não pagar a multa cheia</li>
-   <li class="rv"><i><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg></i>Não gastar com advogado à toa</li>
-   <li class="rv"><i><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg></i>Não perder o prazo da defesa</li>
-   <li class="rv"><i><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg></i>Não perder pontos sem precisar</li>
-   <li class="rv"><i><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg></i>Proteger a CNH que te sustenta</li>
-  </ul>
  </div>
 </section>
 
@@ -571,6 +559,7 @@ fbq('init','2452932315525419');fbq('track','PageView');
    <div class="rl"><div class="rx r"><b>20</b>com 2 ou mais gravíssimas</div><div class="rx o"><b>30</b>com 1 gravíssima</div><div class="rx g"><b>40</b>sem gravíssima, ou com EAR</div></div>
    <p class="tcap"><b>Passou do seu limite em 12 meses,</b> a CNH é suspensa</p>
   </div>
+  <a class="btn" href="#planos">ACESSAR AGORA <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
  </div>
 </section>
 
