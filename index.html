@@ -408,6 +408,7 @@ footer b{color:#C4D3E3}
 img.av{object-fit:cover;display:block;padding:0;background:#ddd}
 .para2 .calc{margin-top:26px}.res .btn,.para2 .btn,.dentro .btn{margin-top:24px}
 section.caso{background:#F5F7FA!important}section.dentro{background:#fff!important}
+a.box-top{display:block;text-decoration:none;cursor:pointer}a.klink,a.plink,a.stage{display:block;text-decoration:none;color:inherit;cursor:pointer;-webkit-tap-highlight-color:transparent}
 </style>
 <!-- Pixel da Meta: carrega já no início (assíncrono, não trava a página) para contar toda visita -->
 <script>
@@ -425,13 +426,13 @@ fbq('init','2452932315525419');fbq('track','PageView');
   <svg class="rule" width="250" height="14" viewBox="0 0 240 12" fill="none" stroke="#FFC83D" stroke-width="3.4" stroke-linecap="round" aria-hidden="true"><path d="M6 5c60-4 130-4 228 0"/><path d="M18 10c56-3 120-3 206 0" opacity=".6"/></svg>
   <h1>Descubra em 10 minutos se dá para recorrer ou pague com <span class="gr">40% de desconto</span></h1>
   <p class="sub">Antes de pagar a multa cheia ou um advogado, responda <b>3 perguntas no Mapa</b> e saiba o que fazer com a sua.</p>
-  <div class="stage" aria-label="Mapa da Multa de Radar: capa e fichas">
+  <a class="stage" href="#planos" aria-label="Mapa da Multa de Radar: capa e fichas">
    <div class="pg pg-l2"><img src="img/p13.webp" width="560" height="840" alt="Ficha: o checklist do radar" decoding="async"></div>
    <div class="pg pg-l"><img src="img/p15.webp" width="560" height="840" alt="Ficha: tabela da sua multa" decoding="async"></div>
    <div class="pg pg-r"><img src="img/p25.webp" width="560" height="840" alt="Ficha: pague o mínimo" decoding="async"></div>
    <div class="pg pg-r2"><img src="img/p18.webp" width="560" height="840" alt="Ficha: modelo de defesa prévia" decoding="async"></div>
    <img class="cover" src="img/capa.webp" width="560" height="840" alt="Capa do Mapa da Multa de Radar" fetchpriority="high" decoding="async">
-  </div>
+  </a>
   <div class="proof">
    <span><svg viewBox="0 0 24 24" fill="none" stroke="#E0A61B" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c0-3.6 2.9-6 6.5-6s6.5 2.4 6.5 6M16 4.6a3.5 3.5 0 0 1 0 6.8M18 14.3c2 .8 3.5 2.8 3.5 5.7"/></svg><b>+16.327</b> já receberam</span>
    <span><svg viewBox="0 0 24 24" fill="none" stroke="#13924f" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.5l8 3v6c0 5-3.5 8.8-8 10.5-4.5-1.7-8-5.5-8-10.5v-6z"/><path d="M8.5 12l2.5 2.5L16 9.5"/></svg>Regras <b>2026</b></span>
@@ -583,16 +584,16 @@ fbq('init','2452932315525419');fbq('track','PageView');
   <span class="opill">⚡ OFERTA DE HOJE</span>
   <h2>Garanta o seu Mapa da Multa de Radar</h2>
   <div class="box" id="plano-completo">
-   <div class="box-top"><small>⭐ MAIS ESCOLHIDO</small><div class="t">MAPA DA MULTA COMPLETO</div></div>
+   <a class="box-top" data-plano="completo" href="#planos"><small>⭐ MAIS ESCOLHIDO</small><div class="t">MAPA DA MULTA COMPLETO</div></a>
    <div class="hoje2"><span class="ht">🏷️ DESCONTO ESPECIAL HOJE</span><span class="hd hoje">--/--/----</span></div>
    <div class="box-body">
-    <div class="kit" aria-label="Mapa da Multa de Radar com os 4 bônus">
+    <a class="klink" data-plano="completo" href="#planos"><div class="kit" aria-label="Mapa da Multa de Radar com os 4 bônus">
      <img class="k1" src="img/cb1.webp" width="480" height="720" alt="Bônus Painel CNH em Dia" loading="lazy" decoding="async">
      <img class="k2" src="img/cb2.webp" width="480" height="720" alt="Bônus Modelos de Defesa Editáveis" loading="lazy" decoding="async">
      <img class="k3" src="img/cb3.webp" width="480" height="720" alt="Bônus Cartão de Bolso do Radar" loading="lazy" decoding="async">
      <img class="k4" src="img/cb4.webp" width="480" height="720" alt="Bônus Calendário de Prazos da Multa" loading="lazy" decoding="async">
      <img class="kc" src="img/capa.webp" width="560" height="840" alt="Capa do Mapa da Multa de Radar" loading="lazy" decoding="async">
-    </div>
+    </div></a>
     <ul>
      <li>Mapa da Multa de Radar Completo (28 páginas)</li>
      <li>As 3 perguntas que resolvem a sua multa</li>
@@ -605,11 +606,11 @@ fbq('init','2452932315525419');fbq('track','PageView');
      <li class="b"><b>Bônus 4</b> · Calendário de Prazos da Multa <em>GRÁTIS</em></li>
      <li class="l1">Atualização sempre que a regra mudar</li>
     </ul>
-    <div class="price">
+    <a class="price plink" data-plano="completo" href="#planos">
      <div class="de">de <s>R$ 97,00</s> por</div>
      <div class="por">R$ 37,00</div>
      <div class="par">à vista no Pix ou no cartão</div>
-    </div>
+    </a>
     <a class="btn one" data-plano="completo" href="#planos" style="margin-top:20px">QUERO O MAPA COMPLETO</a>
     <div class="pay"><span><svg viewBox="0 0 24 24" fill="#32BCAD" aria-hidden="true"><path d="M5.283 18.36a3.505 3.505 0 0 0 2.493-1.032l3.6-3.6a.684.684 0 0 1 .946 0l3.613 3.613a3.504 3.504 0 0 0 2.493 1.032h.71l-4.56 4.56a3.647 3.647 0 0 1-5.156 0L4.85 18.36ZM18.428 5.627a3.505 3.505 0 0 0-2.493 1.032l-3.613 3.614a.67.67 0 0 1-.946 0l-3.6-3.6A3.505 3.505 0 0 0 5.283 5.64h-.434l4.573-4.572a3.646 3.646 0 0 1 5.156 0l4.559 4.559ZM1.068 9.422 3.79 6.699h1.492a2.483 2.483 0 0 1 1.744.722l3.6 3.6a1.73 1.73 0 0 0 2.443 0l3.614-3.613a2.482 2.482 0 0 1 1.744-.723h1.767l2.737 2.737a3.646 3.646 0 0 1 0 5.156l-2.736 2.736h-1.768a2.482 2.482 0 0 1-1.744-.722l-3.613-3.613a1.77 1.77 0 0 0-2.444 0l-3.6 3.6a2.483 2.483 0 0 1-1.744.722H3.791l-2.723-2.723a3.646 3.646 0 0 1 0-5.156"/></svg>PIX</span><span><svg viewBox="0 0 24 24" fill="none" stroke="#2D6CDF" stroke-width="2.2" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg>CARTÃO</span></div>
     <p class="secure"><svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true" style="vertical-align:-2px"><rect x="4" y="10.5" width="16" height="11" rx="2.5" fill="#E0A61B"/><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3" fill="none" stroke="#E0A61B" stroke-width="2.6"/><circle cx="12" cy="16" r="1.7" fill="#fff"/></svg> Compra 100% segura · Acesso imediato · Garantia de 7&nbsp;dias</p>
@@ -621,7 +622,7 @@ fbq('init','2452932315525419');fbq('track','PageView');
    <span class="ln"><span class="nome2">Mapa da Multa - Completo</span></span>
   </a>
   <div class="box basico">
-   <div class="box-top"><div class="t">MAPA DA MULTA BÁSICO</div></div>
+   <a class="box-top" data-plano="basico" href="#planos"><div class="t">MAPA DA MULTA BÁSICO</div></a>
    <div class="box-body">
     <img class="mb" src="img/capa.webp" width="560" height="840" alt="Capa do Mapa da Multa de Radar" loading="lazy" decoding="async">
     <ul>
@@ -684,7 +685,7 @@ fbq('init','2452932315525419');fbq('track','PageView');
    <div class="de">de <s>R$ 97,00</s> por</div>
    <div class="por">R$ 37,00</div>
   </div>
-  <a class="btn one" href="#planos">QUERO MEU ACESSO AGORA <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+  <a class="btn one" data-plano="completo" href="#planos">QUERO MEU ACESSO AGORA <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
   <p class="secure">Pix ou cartão · acesso no e-mail na hora · garantia de 7&nbsp;dias</p>
  </div>
 </section>
