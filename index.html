@@ -237,6 +237,7 @@ footer p{max-width:720px;margin:8px auto 0}
 @media (prefers-reduced-motion:reduce){.btn,.track{animation:none}.rv{opacity:1;transform:none}}
 
 /* ===== v2: modelado no Mapa Fácil do MEI ===== */
+.demo{background:#EAF0F8;color:var(--tx)}.demo h2{color:var(--n)}.demo .sub2{color:var(--mu)!important}.demo .note{color:var(--mu)}
 :root{--az:#2D6CDF;--ink:#10233A;--tx2:#5E6E7E;--linha:#E3E8EF;--yelt:#FFF4D6;--verdet:#E3F6EC;--verde-d:#147A50}
 .faixa{background:var(--r);color:#fff;font-size:clamp(12.5px,3.8vw,15px);font-weight:800;padding:10px 12px;white-space:nowrap}
 .faixa b{background:#fff;color:var(--r);border-radius:6px;padding:1px 7px;margin-left:5px}
@@ -246,7 +247,7 @@ footer p{max-width:720px;margin:8px auto 0}
 .hero .nome em{font-style:normal;color:var(--az)}
 .hero .rule{display:block;margin:6px auto 8px;width:min(250px,64vw);height:auto}
 .hero h1{font-size:clamp(22px,6.2vw,40px)}
-.stage{position:relative;width:100%;max-width:520px;aspect-ratio:1/.7;margin:14px auto 4px}
+.stage{position:relative;width:100%;max-width:520px;aspect-ratio:1/.645;margin:10px auto 6px}
 .stage .pg{position:absolute;bottom:4%;width:30%;border-radius:6px;border:2px solid #fff;box-shadow:0 10px 24px rgba(14,27,44,.3);background:#fff}
 .stage .pg-l2{left:0;transform:rotate(-8deg);z-index:1}
 .stage .pg-l{left:14%;transform:rotate(-4deg);bottom:7%;z-index:2}
@@ -254,8 +255,8 @@ footer p{max-width:720px;margin:8px auto 0}
 .stage .pg-r2{right:0;transform:rotate(8deg);z-index:1}
 .stage .cover{position:absolute;left:50%;bottom:0;width:42%;transform:translateX(-50%);border-radius:8px;box-shadow:0 20px 40px rgba(14,27,44,.45);z-index:3}
 .btn.one{white-space:nowrap;font-size:clamp(16px,4.6vw,19px)}
-.proof{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin:22px auto 0}
-.proof span{display:flex;align-items:center;gap:6px;background:#fff;border:1px solid #d9e1ec;border-radius:30px;padding:7px 13px;font-size:13.5px;font-weight:800;color:var(--n)}
+.proof{display:flex;justify-content:center;gap:6px;flex-wrap:nowrap;margin:18px auto 0}
+.proof span{display:flex;align-items:center;gap:5px;background:#fff;border:1px solid #d9e1ec;border-radius:30px;padding:7px 11px;font-size:clamp(12px,3.5vw,13.5px);font-weight:800;color:var(--n);white-space:nowrap}
 .proof b{color:var(--az)}
 .proof svg{width:16px;height:16px}
 .hero-copy{max-width:700px;margin:20px auto 0;font-size:16.5px;line-height:1.65;text-align:center;color:var(--tx);font-weight:600}
@@ -297,8 +298,8 @@ footer p{max-width:720px;margin:8px auto 0}
 .box-body{padding:20px 18px 24px}
 .kit{position:relative;width:100%;max-width:420px;aspect-ratio:1/.72;margin:4px auto 14px}
 .kit img{position:absolute;bottom:4%;width:30%;border-radius:6px;box-shadow:0 10px 22px rgba(14,27,44,.35)}
-.kit .k1{left:0;transform:rotate(-7deg);z-index:1}
-.kit .k2{left:17%;bottom:8%;transform:rotate(-3deg);z-index:2}
+.kit .k1{left:0;transform:rotate(-7deg);z-index:2}
+.kit .k2{left:15%;bottom:10%;transform:rotate(-2deg);z-index:1}
 .kit .k3{right:0;transform:rotate(7deg);z-index:1}
 .kit .kc{left:50%;bottom:0;width:40%;transform:translateX(-50%);z-index:3;box-shadow:0 18px 36px rgba(14,27,44,.45)}
 .box ul{list-style:none}
@@ -357,6 +358,7 @@ footer p{max-width:720px;margin:8px auto 0}
 footer{background:#0A1524;color:#7F93A8;font-size:12.5px;line-height:1.7;padding:28px 20px}
 footer b{color:#C4D3E3}
 @media (prefers-reduced-motion:reduce){.escolha,.escolha .seta svg{animation:none}}
+@media (max-height:640px) and (max-width:480px){.hero{padding-top:10px}.hero .kick{font-size:14px;padding:5px 14px;margin-bottom:5px}.hero .nome{font-size:28px}.hero .rule{margin:4px auto 5px}.hero h1{font-size:21px}.hero .sub{font-size:14px;margin-top:6px}.stage{width:88%;margin:6px auto 4px}}
 </style>
 <!-- Pixel da Meta: carrega já no início (assíncrono, não trava a página) para contar toda visita -->
 <script>
@@ -382,7 +384,6 @@ fbq('init','2452932315525419');fbq('track','PageView');
    <img class="pg pg-r2" src="img/p18.webp" width="560" height="840" alt="Ficha: modelo de defesa prévia" decoding="async">
    <img class="cover" src="img/capa.webp" width="560" height="840" alt="Capa do Mapa da Multa de Radar" fetchpriority="high" decoding="async">
   </div>
-  <a class="btn one" href="#planos">Quero o Mapa da Multa <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
   <div class="proof">
    <span><svg viewBox="0 0 24 24" fill="none" stroke="#2D6CDF" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.5l8 3v6c0 5-3.5 8.8-8 10.5-4.5-1.7-8-5.5-8-10.5v-6z"/><path d="M8.5 12l2.5 2.5L16 9.5"/></svg>Regras <b>2026</b></span>
    <span><svg viewBox="0 0 24 24" fill="none" stroke="#2D6CDF" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-12a7 7 0 0 1 14 0c0 5.8-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>Vale em <b>todo o Brasil</b></span>
@@ -573,13 +574,13 @@ fbq('init','2452932315525419');fbq('track','PageView');
     </div>
     <a class="btn one" data-plano="completo" href="#planos" style="margin-top:20px">Quero o Mapa Completo</a>
     <div class="pay"><span><svg viewBox="0 0 24 24" fill="#32BCAD" aria-hidden="true"><path d="M5.283 18.36a3.505 3.505 0 0 0 2.493-1.032l3.6-3.6a.684.684 0 0 1 .946 0l3.613 3.613a3.504 3.504 0 0 0 2.493 1.032h.71l-4.56 4.56a3.647 3.647 0 0 1-5.156 0L4.85 18.36ZM18.428 5.627a3.505 3.505 0 0 0-2.493 1.032l-3.613 3.614a.67.67 0 0 1-.946 0l-3.6-3.6A3.505 3.505 0 0 0 5.283 5.64h-.434l4.573-4.572a3.646 3.646 0 0 1 5.156 0l4.559 4.559ZM1.068 9.422 3.79 6.699h1.492a2.483 2.483 0 0 1 1.744.722l3.6 3.6a1.73 1.73 0 0 0 2.443 0l3.614-3.613a2.482 2.482 0 0 1 1.744-.723h1.767l2.737 2.737a3.646 3.646 0 0 1 0 5.156l-2.736 2.736h-1.768a2.482 2.482 0 0 1-1.744-.722l-3.613-3.613a1.77 1.77 0 0 0-2.444 0l-3.6 3.6a2.483 2.483 0 0 1-1.744.722H3.791l-2.723-2.723a3.646 3.646 0 0 1 0-5.156"/></svg>PIX</span><span><svg viewBox="0 0 24 24" fill="none" stroke="#2D6CDF" stroke-width="2.2" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg>CARTÃO</span></div>
-    <p class="secure"><svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true" style="vertical-align:-2px"><rect x="4" y="10.5" width="16" height="11" rx="2.5" fill="#E0A61B"/><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3" fill="none" stroke="#E0A61B" stroke-width="2.6"/><circle cx="12" cy="16" r="1.7" fill="#fff"/></svg> Compra 100% segura · Acesso imediato · Garantia de 7 dias</p>
+    <p class="secure"><svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true" style="vertical-align:-2px"><rect x="4" y="10.5" width="16" height="11" rx="2.5" fill="#E0A61B"/><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3" fill="none" stroke="#E0A61B" stroke-width="2.6"/><circle cx="12" cy="16" r="1.7" fill="#fff"/></svg> Compra 100% segura · Acesso imediato · Garantia de 7&nbsp;dias</p>
    </div>
   </div>
   <a href="#plano-completo" class="escolha">
    <span class="seta"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20V5"/><path d="M5 12l7-7 7 7"/></svg></span>
    <span class="ln">Por só <b>R$ 10,00</b> a mais você leva os 3 bônus</span>
-   <span class="ln"><span class="nome2">Quero o Mapa da Multa Completo</span></span>
+   <span class="ln"><span class="nome2">Mapa da Multa - Completo</span></span>
   </a>
   <div class="box basico">
    <div class="box-top"><div class="t">MAPA DA MULTA BÁSICO</div></div>
@@ -645,7 +646,7 @@ fbq('init','2452932315525419');fbq('track','PageView');
    <div class="por">R$ 37,00</div>
   </div>
   <a class="btn one" href="#planos">Quero meu acesso agora <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-  <p class="secure">Pix ou cartão · acesso no e-mail na hora · garantia de 7 dias</p>
+  <p class="secure">Pix ou cartão · acesso no e-mail na hora · garantia de 7&nbsp;dias</p>
  </div>
 </section>
 
