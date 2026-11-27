@@ -237,6 +237,8 @@ footer p{max-width:720px;margin:8px auto 0}
 @media (prefers-reduced-motion:reduce){.btn,.track{animation:none}.rv{opacity:1;transform:none}}
 
 /* ===== v2: modelado no Mapa Fácil do MEI ===== */
+.btn{white-space:nowrap;font-size:clamp(14.5px,4.4vw,18px);padding:17px 14px}
+.nudge .nb,.escolha .nome2,.btn-alt{white-space:nowrap}
 .demo{background:#EAF0F8;color:var(--tx)}.demo h2{color:var(--n)}.demo .sub2{color:var(--mu)!important}.demo .note{color:var(--mu)}
 :root{--az:#2D6CDF;--ink:#10233A;--tx2:#5E6E7E;--linha:#E3E8EF;--yelt:#FFF4D6;--verdet:#E3F6EC;--verde-d:#147A50}
 .faixa{background:var(--r);color:#fff;font-size:clamp(12.5px,3.8vw,15px);font-weight:800;padding:10px 12px;white-space:nowrap}
@@ -298,9 +300,9 @@ footer p{max-width:720px;margin:8px auto 0}
 .box-top{background:var(--y);color:var(--n);text-align:center;padding:13px}
 .box-top small{display:block;font-weight:800;font-size:12px;letter-spacing:.1em;margin-bottom:2px}
 .box-top .t{font-weight:800;font-size:clamp(17px,4.8vw,22px);line-height:1.2}
-.hoje2{display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap;background:#FDE8E6;padding:10px 14px}
-.hoje2 .ht{font-weight:800;color:var(--r);font-size:15px}
-.hoje2 .hd{background:#fff;border:2px solid var(--r);color:var(--r);border-radius:999px;padding:2px 11px;font-weight:800;font-size:13.5px}
+.hoje2{display:flex;align-items:center;justify-content:center;gap:8px;flex-wrap:nowrap;white-space:nowrap;background:#FDE8E6;padding:10px 10px}
+.hoje2 .ht{font-weight:800;color:var(--r);font-size:clamp(12px,3.7vw,15px)}
+.hoje2 .hd{background:#fff;border:2px solid var(--r);color:var(--r);border-radius:999px;padding:2px 9px;font-weight:800;font-size:clamp(11.5px,3.5vw,13.5px)}
 .box-body{padding:20px 18px 24px}
 .kit{position:relative;width:100%;max-width:420px;aspect-ratio:1/.72;margin:4px auto 14px}
 .kit img{position:absolute;bottom:4%;width:30%;border-radius:6px;box-shadow:0 10px 22px rgba(14,27,44,.35)}
@@ -475,7 +477,7 @@ fbq('init','2452932315525419');fbq('track','PageView');
    <div class="ceco">Os 40% valem <b id="cEco">R$ 78,09</b>. O Mapa custa <b>R$ 37</b>, uma vez só.</div>
    <p class="cnote">E se a notificação tiver erro, a defesa pronta pode derrubar a multa e os pontos. Os 40% valem para quem já tem o SNE na data da multa; sem ele, o desconto é de 20%.</p>
   </div>
-  <a class="btn" href="#planos">Quero pagar menos na minha multa <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+  <a class="btn" href="#planos">Quero pagar menos na multa <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
  </div>
 </section>
 
