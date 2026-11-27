@@ -276,10 +276,12 @@ footer p{max-width:720px;margin:8px auto 0}
 .inpi{text-align:center;margin-top:8px;font-size:12px;color:#7a8696;letter-spacing:.3px}
 /* por dentro (composição) */
 .demo .sub2{text-align:center;color:#c9d3e0;font-size:16.5px;font-weight:600;max-width:640px;margin:12px auto 0;line-height:1.55}
-.compo{position:relative;max-width:640px;margin:28px auto 0}
-.compo-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-.compo-grid img{width:100%;border-radius:10px;box-shadow:0 8px 20px rgba(0,0,0,.3);cursor:zoom-in}
-.compo-book{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:44%;z-index:4;border-radius:10px;box-shadow:0 0 0 4px #fff,0 24px 42px rgba(0,0,0,.5)}
+.compo{position:relative;max-width:640px;margin:26px -6px 0}
+@media (min-width:660px){.compo{margin:26px auto 0}}
+.compo-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.compo-grid .fc{overflow:hidden;border-radius:10px;aspect-ratio:430/680;background:#fff;box-shadow:0 8px 20px rgba(14,27,44,.14);border:1px solid #dfe6ef}
+.compo-grid img{width:130.24%;max-width:none;margin:-18.84% 0 0 -14.88%;cursor:zoom-in}
+.compo-book{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:52%;z-index:4;border-radius:10px;box-shadow:0 0 0 4px #fff,0 24px 42px rgba(0,0,0,.5)}
 .demo .note{margin-top:16px}
 .lb{position:fixed;inset:0;background:rgba(8,20,36,.93);display:none;align-items:center;justify-content:center;z-index:99;padding:14px}
 .lb.show{display:flex}
@@ -414,10 +416,10 @@ fbq('init','2452932315525419');fbq('track','PageView');
   <p class="sub2">Cada pergunta virou uma ficha. Cada ficha te diz o próximo passo. Nada de juridiquês.</p>
   <div class="compo rv">
    <div class="compo-grid">
-    <img src="img/p03.webp" width="560" height="840" alt="Ficha: anatomia da notificação" loading="lazy" decoding="async">
-    <img src="img/p15.webp" width="560" height="840" alt="Ficha: tabela da sua multa" loading="lazy" decoding="async">
-    <img src="img/p13.webp" width="560" height="840" alt="Ficha: o checklist do radar" loading="lazy" decoding="async">
-    <img src="img/p25.webp" width="560" height="840" alt="Ficha: pague o mínimo" loading="lazy" decoding="async">
+    <div class="fc"><img src="img/p03.webp" width="560" height="840" alt="Ficha: anatomia da notificação" loading="lazy" decoding="async"></div>
+    <div class="fc"><img src="img/p15.webp" width="560" height="840" alt="Ficha: tabela da sua multa" loading="lazy" decoding="async"></div>
+    <div class="fc"><img src="img/p13.webp" width="560" height="840" alt="Ficha: o checklist do radar" loading="lazy" decoding="async"></div>
+    <div class="fc"><img src="img/p25.webp" width="560" height="840" alt="Ficha: pague o mínimo" loading="lazy" decoding="async"></div>
    </div>
    <img class="compo-book" src="img/capa.webp" width="560" height="840" alt="Capa do Mapa da Multa de Radar" loading="lazy" decoding="async">
   </div>
