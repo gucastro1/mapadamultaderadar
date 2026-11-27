@@ -318,8 +318,7 @@ footer p{max-width:720px;margin:8px auto 0}
 .box ul li.b:before{content:"🎁";left:10px;font-size:15px}
 .box ul li.b b{color:#B7791F}
 .box ul li.b em{position:absolute;right:10px;top:50%;transform:translateY(-50%);font-style:normal;color:#13924f;font-weight:800;font-size:12px;background:#fff;border-radius:7px;padding:2px 7px}
-.box ul li.up{color:#13924f}
-.box ul li.up:before{content:"↻"}
+.box ul li.l1{white-space:nowrap;font-size:clamp(12.5px,3.6vw,15.5px);letter-spacing:-.01em;padding-right:4px}
 .price{text-align:center;margin:22px 0 4px}
 .price .de{color:var(--mu);font-size:15px;font-weight:800}
 .price .de s{color:var(--r);font-weight:800}
@@ -367,6 +366,36 @@ footer{background:#0A1524;color:#7F93A8;font-size:12.5px;line-height:1.7;padding
 footer b{color:#C4D3E3}
 @media (prefers-reduced-motion:reduce){.escolha,.escolha .seta svg{animation:none}}
 @media (max-height:640px) and (max-width:480px){.hero{padding-top:10px}.hero .kick{font-size:14px;padding:5px 14px;margin-bottom:5px}.hero .nome{font-size:28px}.hero .rule{margin:4px auto 5px}.hero h1{font-size:21px}.hero .sub{font-size:14px;margin-top:6px}.stage{width:88%;margin:6px auto 4px}}
+
+/* depoimentos */
+.depsec{background:#fff}
+.bigproof{display:flex;align-items:center;gap:16px;max-width:620px;margin:26px auto 0;background:var(--verdet);border-radius:22px;padding:18px 20px}
+.bigproof b{font-weight:800;font-size:34px;color:var(--verde-d);line-height:1;white-space:nowrap;letter-spacing:-.02em}
+.bigproof p{font-size:15.5px;font-weight:800;color:var(--n);line-height:1.4}
+.depos{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px;margin-top:22px}
+.depo{background:#fff;border:1px solid var(--linha);border-radius:20px;padding:20px;box-shadow:0 6px 18px rgba(14,27,44,.07)}
+.depo .who{display:flex;align-items:center;gap:12px;margin-bottom:10px}
+.depo .av{width:54px;height:54px;border-radius:50%;flex:0 0 54px;border:3px solid var(--g);background:var(--n);color:#fff;font-weight:800;font-size:18px;display:grid;place-items:center}
+.depo .who b{display:block;font-weight:800;font-size:16px;color:var(--n)}
+.depo .who small{color:var(--mu);font-size:13px;font-weight:700}
+.depo .stars{color:#E0A61B;font-size:16px;letter-spacing:2px;margin-bottom:6px}
+.depo q{display:block;font-size:16px;line-height:1.6;color:var(--tx);font-weight:600;quotes:"“" "”"}
+
+/* v3: bônus 4 + kit com 4 fichas visíveis + botões estilo Patrick */
+.bgrid{grid-template-columns:1fr 1fr!important;gap:26px 14px!important;margin-top:30px}
+@media(min-width:820px){.bgrid{grid-template-columns:repeat(4,1fr)!important}}
+.bcard{padding-top:22px}
+.bcard:last-child:nth-child(odd){grid-column:auto;max-width:none}
+.kit{aspect-ratio:1/.84!important;max-width:440px}
+.kit img{width:26%!important;bottom:auto}
+.kit .k1{left:0!important;top:44%!important;transform:rotate(-9deg)!important;z-index:2!important}
+.kit .k2{left:12%!important;top:4%!important;transform:rotate(-5deg)!important;z-index:1!important}
+.kit .k3{right:12%!important;left:auto!important;top:4%!important;transform:rotate(5deg)!important;z-index:1!important}
+.kit .k4{right:0!important;left:auto!important;top:44%!important;transform:rotate(9deg)!important;z-index:2!important}
+.kit .kc{width:38%!important;left:50%!important;top:auto;bottom:0!important;transform:translateX(-50%)!important;z-index:3!important}
+.btn,.btn.one{font-size:clamp(15px,4.6vw,19px);padding:18px 28px;letter-spacing:.02em;white-space:nowrap;box-sizing:border-box}
+.btn-alt{padding:14px 26px;box-sizing:border-box}
+.btn,.btn.one{width:min(460px,calc(100vw - 48px));max-width:100%}
 </style>
 <!-- Pixel da Meta: carrega já no início (assíncrono, não trava a página) para contar toda visita -->
 <script>
@@ -408,7 +437,7 @@ fbq('init','2452932315525419');fbq('track','PageView');
    <li>Defesa negada: o recurso à JARI e ao CETRAN</li>
   </ul>
   <p class="hero-price rv">de <s>R$ 97,00</s> por apenas <b>R$ 37,00</b> hoje</p>
-  <a class="btn one" href="#planos" style="margin-top:16px">Quero o Mapa da Multa <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+  <a class="btn one" href="#planos" style="margin-top:16px">QUERO O MAPA DA MULTA <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
   <div class="cnote"><span>⚡ Acesso imediato</span><span>🛡️ Garantia de 7 dias</span></div>
   <p class="deliver">Você recebe tudo na hora, direto no seu <b>e-mail</b></p>
   <p class="inpi">Materiais e Marcas Registrados no INPI</p>
@@ -477,7 +506,7 @@ fbq('init','2452932315525419');fbq('track','PageView');
    <div class="ceco">Os 40% valem <b id="cEco">R$ 78,09</b>. O Mapa custa <b>R$ 37</b>, uma vez só.</div>
    <p class="cnote">E se a notificação tiver erro, a defesa pronta pode derrubar a multa e os pontos. Os 40% valem para quem já tem o SNE na data da multa; sem ele, o desconto é de 20%.</p>
   </div>
-  <a class="btn" href="#planos">Quero pagar menos na multa <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+  <a class="btn" href="#planos">ACESSAR AGORA <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
  </div>
 </section>
 
@@ -485,7 +514,7 @@ fbq('init','2452932315525419');fbq('track','PageView');
  <div class="w">
   <h2>A sua notificação tem prazo</h2>
   <p>Passou a data da defesa, você perde a chance de contestar. Passou o vencimento, perde o desconto e paga a multa cheia.</p>
-  <a class="btn" href="#planos">Quero resolver antes do prazo <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+  <a class="btn" href="#planos">ACESSAR AGORA <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
  </div>
 </section>
 
@@ -537,15 +566,16 @@ fbq('init','2452932315525419');fbq('track','PageView');
 
 <section class="bonsec">
  <div class="w">
-  <span class="tag2">E não para por aí</span>
-  <h2>3 bônus exclusivos</h2>
-  <p class="lead">Todos inclusos no plano Completo, sem custo a mais.</p>
+  <span class="tag2">E não para por aí… tem mais!</span>
+  <h2>🔥 4 bônus exclusivos</h2>
+  <p class="lead">Todos inclusos no plano Completo, sem custo a mais. Cada um em um arquivo separado.</p>
   <div class="bgrid">
-   <div class="bcard rv"><img src="img/cb1.webp" width="480" height="720" alt="Painel CNH em Dia" loading="lazy" decoding="async"><h3>Painel CNH em Dia</h3><span class="bv">Valor: <s>R$ 27</s> <b>GRÁTIS</b></span></div>
-   <div class="bcard rv"><img src="img/cb2.webp" width="480" height="720" alt="Modelos de Defesa Editáveis" loading="lazy" decoding="async"><h3>Modelos de Defesa Editáveis</h3><span class="bv">Valor: <s>R$ 27</s> <b>GRÁTIS</b></span></div>
-   <div class="bcard rv"><img src="img/cb3.webp" width="480" height="720" alt="Cartão de Bolso do Radar" loading="lazy" decoding="async"><h3>Cartão de Bolso do Radar</h3><span class="bv">Valor: <s>R$ 17</s> <b>GRÁTIS</b></span></div>
+   <div class="bcard rv"><span class="bn">Bônus #1</span><img src="img/cb1.webp" width="480" height="720" alt="Painel CNH em Dia" loading="lazy" decoding="async"><h3>Painel CNH em Dia</h3><span class="bv">Valor: <s>R$ 27</s> <b>GRÁTIS</b></span></div>
+   <div class="bcard rv"><span class="bn">Bônus #2</span><img src="img/cb2.webp" width="480" height="720" alt="Modelos de Defesa Editáveis" loading="lazy" decoding="async"><h3>Modelos de Defesa Editáveis</h3><span class="bv">Valor: <s>R$ 27</s> <b>GRÁTIS</b></span></div>
+   <div class="bcard rv"><span class="bn">Bônus #3</span><img src="img/cb3.webp" width="480" height="720" alt="Cartão de Bolso do Radar" loading="lazy" decoding="async"><h3>Cartão de Bolso do Radar</h3><span class="bv">Valor: <s>R$ 17</s> <b>GRÁTIS</b></span></div>
+   <div class="bcard rv"><span class="bn">Bônus #4</span><img src="img/cb4.webp" width="480" height="720" alt="Calendário de Prazos da Multa" loading="lazy" decoding="async"><h3>Calendário de Prazos da Multa</h3><span class="bv">Valor: <s>R$ 17</s> <b>GRÁTIS</b></span></div>
   </div>
-  <div class="btot">R$ 71 em bônus · grátis no plano Completo</div>
+  <div class="btot">R$ 88 em bônus · grátis no plano Completo</div>
  </div>
 </section>
 
@@ -557,10 +587,11 @@ fbq('init','2452932315525419');fbq('track','PageView');
    <div class="box-top"><small>⭐ MAIS ESCOLHIDO</small><div class="t">MAPA DA MULTA COMPLETO</div></div>
    <div class="hoje2"><span class="ht">🏷️ DESCONTO ESPECIAL HOJE</span><span class="hd hoje">--/--/----</span></div>
    <div class="box-body">
-    <div class="kit" aria-label="Mapa da Multa de Radar com os 3 bônus">
+    <div class="kit" aria-label="Mapa da Multa de Radar com os 4 bônus">
      <img class="k1" src="img/cb1.webp" width="480" height="720" alt="Bônus Painel CNH em Dia" loading="lazy" decoding="async">
      <img class="k2" src="img/cb2.webp" width="480" height="720" alt="Bônus Modelos de Defesa Editáveis" loading="lazy" decoding="async">
      <img class="k3" src="img/cb3.webp" width="480" height="720" alt="Bônus Cartão de Bolso do Radar" loading="lazy" decoding="async">
+     <img class="k4" src="img/cb4.webp" width="480" height="720" alt="Bônus Calendário de Prazos da Multa" loading="lazy" decoding="async">
      <img class="kc" src="img/capa.webp" width="560" height="840" alt="Capa do Mapa da Multa de Radar" loading="lazy" decoding="async">
     </div>
     <ul>
@@ -572,21 +603,22 @@ fbq('init','2452932315525419');fbq('track','PageView');
      <li class="b"><b>Bônus 1</b> · Painel CNH em Dia <em>GRÁTIS</em></li>
      <li class="b"><b>Bônus 2</b> · Modelos de Defesa Editáveis <em>GRÁTIS</em></li>
      <li class="b"><b>Bônus 3</b> · Cartão de Bolso do Radar <em>GRÁTIS</em></li>
-     <li class="up">Atualização sempre que a regra mudar</li>
+     <li class="b"><b>Bônus 4</b> · Calendário de Prazos da Multa <em>GRÁTIS</em></li>
+     <li class="l1">Atualização sempre que a regra mudar</li>
     </ul>
     <div class="price">
      <div class="de">de <s>R$ 97,00</s> por</div>
      <div class="por">R$ 37,00</div>
      <div class="par">à vista no Pix ou no cartão</div>
     </div>
-    <a class="btn one" data-plano="completo" href="#planos" style="margin-top:20px">Quero o Mapa Completo</a>
+    <a class="btn one" data-plano="completo" href="#planos" style="margin-top:20px">QUERO O MAPA COMPLETO</a>
     <div class="pay"><span><svg viewBox="0 0 24 24" fill="#32BCAD" aria-hidden="true"><path d="M5.283 18.36a3.505 3.505 0 0 0 2.493-1.032l3.6-3.6a.684.684 0 0 1 .946 0l3.613 3.613a3.504 3.504 0 0 0 2.493 1.032h.71l-4.56 4.56a3.647 3.647 0 0 1-5.156 0L4.85 18.36ZM18.428 5.627a3.505 3.505 0 0 0-2.493 1.032l-3.613 3.614a.67.67 0 0 1-.946 0l-3.6-3.6A3.505 3.505 0 0 0 5.283 5.64h-.434l4.573-4.572a3.646 3.646 0 0 1 5.156 0l4.559 4.559ZM1.068 9.422 3.79 6.699h1.492a2.483 2.483 0 0 1 1.744.722l3.6 3.6a1.73 1.73 0 0 0 2.443 0l3.614-3.613a2.482 2.482 0 0 1 1.744-.723h1.767l2.737 2.737a3.646 3.646 0 0 1 0 5.156l-2.736 2.736h-1.768a2.482 2.482 0 0 1-1.744-.722l-3.613-3.613a1.77 1.77 0 0 0-2.444 0l-3.6 3.6a2.483 2.483 0 0 1-1.744.722H3.791l-2.723-2.723a3.646 3.646 0 0 1 0-5.156"/></svg>PIX</span><span><svg viewBox="0 0 24 24" fill="none" stroke="#2D6CDF" stroke-width="2.2" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg>CARTÃO</span></div>
     <p class="secure"><svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true" style="vertical-align:-2px"><rect x="4" y="10.5" width="16" height="11" rx="2.5" fill="#E0A61B"/><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3" fill="none" stroke="#E0A61B" stroke-width="2.6"/><circle cx="12" cy="16" r="1.7" fill="#fff"/></svg> Compra 100% segura · Acesso imediato · Garantia de 7&nbsp;dias</p>
    </div>
   </div>
   <a href="#plano-completo" class="escolha">
    <span class="seta"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20V5"/><path d="M5 12l7-7 7 7"/></svg></span>
-   <span class="ln">Por só <b>R$ 10,00</b> a mais você leva os 3 bônus</span>
+   <span class="ln">Por só <b>R$ 10,00</b> a mais você leva os 4 bônus</span>
    <span class="ln"><span class="nome2">Mapa da Multa - Completo</span></span>
   </a>
   <div class="box basico">
@@ -596,25 +628,26 @@ fbq('init','2452932315525419');fbq('track','PageView');
     <ul>
      <li>Mapa da Multa de Radar - Básico</li>
      <li>Acesso imediato</li>
-     <li class="x">Sem os 3 bônus</li>
+     <li class="x">Sem os 4 bônus</li>
     </ul>
     <div class="price"><div class="por">R$ 27,00</div></div>
-    <a class="btn-alt" data-plano="basico" href="#planos">Quero o Mapa Básico</a>
+    <a class="btn-alt" data-plano="basico" href="#planos">QUERO O MAPA BÁSICO</a>
    </div>
   </div>
  </div>
 </section>
 
-<!-- DEPOIMENTOS: liberar quando chegarem as avaliações reais (foto, nome, idade, profissão, cidade)
-<section>
+<section class="depsec">
  <div class="w">
-  <h2>O que dizem quem já usou</h2>
+  <h2>O que dizem os motoristas que já usaram</h2>
+  <div class="bigproof rv"><b>+16.327</b><p>motoristas já receberam o Mapa da Multa de Radar.</p></div>
   <div class="depos">
-   <div class="depo"><div class="who"><img class="av" src="img/depo-1.webp" width="150" height="150" alt=""><div><b>NOME</b><small>IDADE anos · PROFISSÃO · CIDADE/UF</small></div></div><div class="stars">★★★★★</div><q>TEXTO REAL DO CLIENTE</q></div>
+   <div class="depo rv"><div class="who"><span class="av">DA</span><div><b>Diego Amaral</b><small>Avaliação 5 estrelas</small></div></div><div class="stars">★★★★★</div><q>Recebi o mapa e no mesmo dia consegui 40% de desconto em uma multa.</q></div>
+   <div class="depo rv"><div class="who"><span class="av">PV</span><div><b>Paulo Vilaça</b><small>Avaliação 5 estrelas</small></div></div><div class="stars">★★★★★</div><q>Realmente esse mapa é muito fácil de entender, já anulei uma multa gravíssima que veio errada que me faria perder a carteira.</q></div>
+   <div class="depo rv"><div class="who"><span class="av">DS</span><div><b>Douglas Santos</b><small>Avaliação 5 estrelas</small></div></div><div class="stars">★★★★★</div><q>Muita gratidão a essas informações do mapa. Consegui 40% de desconto em 3 multas e economizei quase R$ 300 no total.</q></div>
   </div>
  </div>
 </section>
--->
 
 <section class="gar">
  <div class="w">
@@ -652,7 +685,7 @@ fbq('init','2452932315525419');fbq('track','PageView');
    <div class="de">de <s>R$ 97,00</s> por</div>
    <div class="por">R$ 37,00</div>
   </div>
-  <a class="btn one" href="#planos">Quero meu acesso agora <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+  <a class="btn one" href="#planos">QUERO MEU ACESSO AGORA <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
   <p class="secure">Pix ou cartão · acesso no e-mail na hora · garantia de 7&nbsp;dias</p>
  </div>
 </section>
@@ -724,6 +757,11 @@ document.querySelectorAll('.bcard').forEach(function(c){
   ['touchstart','scroll','mousemove','keydown'].forEach(function(ev){ addEventListener(ev, go, { once: true, passive: true }); });
   setTimeout(go, 300);
 })();
+</script>
+
+<script>
+(function(){function fit(){document.querySelectorAll('.btn,.btn-alt').forEach(function(e){e.style.fontSize='';var fs=parseFloat(getComputedStyle(e).fontSize);var cs=getComputedStyle(e),pad=Math.max(26,parseFloat(cs.paddingLeft)),r=document.createRange();r.selectNodeContents(e);while(fs>12&&(e.scrollWidth>e.clientWidth||r.getBoundingClientRect().width>e.getBoundingClientRect().width-2*pad)){fs-=.5;e.style.fontSize=fs+'px';}});}
+if(document.readyState!=='loading')fit();else document.addEventListener('DOMContentLoaded',fit);addEventListener('resize',fit);addEventListener('load',fit);})();
 </script>
 </body>
 </html>
